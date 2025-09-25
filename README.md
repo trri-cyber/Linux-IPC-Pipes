@@ -51,7 +51,6 @@ client(p1[1],p2[0]);
 wait(waits); 
 return 0; 
 } 
-
 void server(int rfd,int wfd) 
 { 
 int i,j,n; 
@@ -72,19 +71,20 @@ int i,j,n; char fname[2000];
 char buff[2000];
 printf("ENTER THE FILE NAME :");
 scanf("%s",fname);
-printf("CLIENT SENDING THE REQUEST .... PLEASE WAIT\n");
 sleep(10);
 write(wfd,fname,2000);
 n=read(rfd,buff,2000);
 buff[n]='\0';
 printf("THE RESULTS OF CLIENTS ARE ...... \n"); write(1,buff,n);
 }
-
 ```
 
 
+
+
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/a985a5b8-09d1-434e-8b52-03f42226e3c0)
+![image](https://github.com/user-attachments/assets/0421e21b-4f5e-4b99-b97d-dd440375f9e5)
+
 
 
 ## C Program that illustrate communication between two process using named pipes using Linux API system calls
@@ -103,9 +103,9 @@ exit(EXIT_SUCCESS);
 
 
 
-## OUTPUT
-![image](https://github.com/user-attachments/assets/2971fd47-0012-4283-a206-c5d4d6871fc4)
 
+## OUTPUT
+![image](https://github.com/user-attachments/assets/ace245da-fe14-4942-86e3-e78753bebe8c)
 
 # RESULT:
 The program is executed successfully.
